@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Box, TextField, Button, Paper, Typography } from "@mui/material";
 import { useThemeColor } from "../Context/Themecolor";
+import { useNavigate } from "react-router-dom";
 
 function Addworkout() {
     const {bgcolor,usercolor,textcolor,usertextcolor} = useThemeColor()
+    const navigate = useNavigate()
 
   const [data, setdata] = useState({
     category: "",
@@ -37,6 +39,7 @@ function Addworkout() {
         notes: "",
         date: "",
       });
+      navigate("/workoutlist")
     } catch (error) {
       console.log(error);
     }

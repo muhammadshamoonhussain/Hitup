@@ -80,6 +80,9 @@ function Login({settoken,setrole}) {
                         <li class="has-sub">
                           <a href="/#blog">Blog</a>
                         </li>
+                         <li class="has-sub">
+                          <a href="/#contact">Contact</a>
+                        </li>
                       </ul>
                     </nav>
                   </div>

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Box, TextField, Button, Paper, Typography } from "@mui/material";
 import { useThemeColor } from "../Context/Themecolor";
+import { useNavigate } from "react-router-dom";
 
 function Addnutrition() {
-
+const navigate = useNavigate()
     const [data,setdata] = useState({
           category:"",
             foodname:"",
@@ -40,6 +41,7 @@ function Addnutrition() {
             fats:"",
             date:""
             })
+            navigate("/nutritionlist")
 
         } catch (error) {
             console.log(error);
